@@ -186,16 +186,16 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
 
         -- Left widgets
-        {
+        first = {
             layout = wibox.layout.fixed.horizontal,
             s.workspaces,
         },
 
         -- Middle widget
-        s.clock,
+        second = s.clock,
 
         -- Right widgets
-        {
+        third = {
             layout = wibox.layout.fixed.horizontal,
             s.tray,
         },
