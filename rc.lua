@@ -187,16 +187,16 @@ awful.screen.connect_for_each_screen(function(s)
         expand = "none",
 
         -- Left widgets
-        first = {
+        {
             layout = wibox.layout.fixed.horizontal,
             s.workspaces,
         },
 
         -- Middle widget
-        second = s.clock,
+        s.clock,
 
         -- Right widgets
-        third = {
+        {
             layout = wibox.layout.fixed.horizontal,
             s.tray,
         },
