@@ -18,6 +18,10 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
+local rrect = function(cr, w, h)
+    gears.shape.rounded_rect(cr, w, h, 8)
+end
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -179,7 +183,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibox({ height = beautiful.useless_gap * 2, width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s })
+    s.mywibox = awful.wibox({ width = awful.screen.focused().geometry.width, ontop = true, screen = s, shape = rrect })
 
     
 
@@ -500,9 +504,7 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 
-    c.shape = function(cr, w, h)
-    	gears.shape.rounded_rect(cr, w, h, 8)
-    end
+    c.shape = rrect
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
