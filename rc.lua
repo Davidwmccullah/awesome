@@ -181,6 +181,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibox({ 
         widget = {
+            layout = wibox.layout.align.horizontal,
             {
                 text = "foo",
                 widget = wibox.widget.textbox
