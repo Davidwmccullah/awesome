@@ -183,27 +183,32 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibox({ width = awful.screen.focused().geometry.width, ontop = true, screen = s, shape = rrect })
+    s.mywibox = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = rrect })
 
     
 
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
-        { -- Left widgets
+
+        -- Left widgets
+        {
             layout = wibox.layout.fixed.horizontal,
             -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
 
-        s.mytasklist, -- Middle widget
+        -- Middle widget
+        s.mytasklist, 
         wibox.widget.textclock(),
-        { -- Right widgets
+
+        -- Right widgets
+        {
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
+            -- mytextclock,
             -- s.mylayoutbox,
         },
     }
@@ -481,7 +486,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
