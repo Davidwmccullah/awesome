@@ -184,6 +184,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Add widgets to the wibox
     s.navbar:setup {
         layout = wibox.layout.align.horizontal,
+        expand = "outside",
 
         -- Left widgets
         first = {
