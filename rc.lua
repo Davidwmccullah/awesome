@@ -179,7 +179,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.navbar = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = rrect })
 
-    
+    s.mypromptbox = awful.widget.prompt()
 
     -- Add widgets to the wibox
     s.navbar:setup {
@@ -193,7 +193,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
 
         -- Middle widget
-        awful.widget.prompt(),
+        s.mypromptbox,
         s.clock,
 
         -- Right widgets
