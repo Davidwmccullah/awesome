@@ -189,7 +189,6 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
-        wibox.container.margin,
         {
             layout = wibox.layout.align.horizontal,
 
@@ -213,7 +212,7 @@ awful.screen.connect_for_each_screen(function(s)
                 -- mytextclock,
                 -- s.mylayoutbox,
             },
-        }
+        },
     }
 end)
 -- }}}
