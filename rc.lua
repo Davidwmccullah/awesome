@@ -189,29 +189,27 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
+        layout = wibox.layout.align.horizontal,
+
+        -- Left widgets
         {
-            layout = wibox.layout.align.horizontal,
+            layout = wibox.layout.fixed.horizontal,
+            -- mylauncher,
+            s.mytaglist,
+            s.mypromptbox,
+        },
 
-            -- Left widgets
-            {
-                layout = wibox.layout.fixed.horizontal,
-                -- mylauncher,
-                s.mytaglist,
-                s.mypromptbox,
-            },
+        -- Middle widget
+        s.mytasklist, 
+        wibox.widget.textclock(),
 
-            -- Middle widget
-            s.mytasklist, 
-            wibox.widget.textclock(),
-
-            -- Right widgets
-            {
-                layout = wibox.layout.fixed.horizontal,
-                -- mykeyboardlayout,
-                wibox.widget.systray(),
-                -- mytextclock,
-                -- s.mylayoutbox,
-            },
+        -- Right widgets
+        {
+            layout = wibox.layout.fixed.horizontal,
+            -- mykeyboardlayout,
+            wibox.widget.systray(),
+            -- mytextclock,
+            -- s.mylayoutbox,
         },
     }
 end)
