@@ -181,6 +181,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibox({ height = beautiful.useless_gap * 2, width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s })
 
+    
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -191,11 +193,14 @@ awful.screen.connect_for_each_screen(function(s)
             s.mypromptbox,
         },
 
-        -- s.mytasklist, -- Middle widget
+        s.mytasklist, -- Middle widget
         wibox.widget.textclock(),
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            -- mykeyboardlayout,
             wibox.widget.systray(),
+            mytextclock,
+            -- s.mylayoutbox,
         },
     }
 end)
