@@ -156,7 +156,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5"}, s, awful.layout.layouts[1])
 
     -- Create a taglist widget
     s.workspaces = awful.widget.taglist {
@@ -164,6 +164,10 @@ awful.screen.connect_for_each_screen(function(s)
         filter  = awful.widget.taglist.filter.all,
         buttons = taglist_buttons
     }
+
+    s.clock = wibox.widget.textclock()
+
+    s.tray = wibox.widget.systray()
 
     -- Create a tasklist widget
     s.tasks = awful.widget.tasklist {
@@ -188,13 +192,12 @@ awful.screen.connect_for_each_screen(function(s)
         },
 
         -- Middle widget
-        s.tasks, 
-        wibox.widget.textclock(),
+        s.clock,
 
         -- Right widgets
         {
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            s.tray,
         },
     }
 end)
