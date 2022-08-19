@@ -29,6 +29,7 @@ awful.screen.connect_for_each_screen(function(s)
                 shape = shapes.rrect,
                 shape_border_width = beautiful.border_width,
                 shape_border_color = beautiful.border_color,
+                shape_clip = true,
                 {     
                     layout = wibox.layout.align.horizontal,
                     expand = "none",
