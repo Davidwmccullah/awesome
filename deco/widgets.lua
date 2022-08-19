@@ -10,7 +10,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.prompt = awful.widget.prompt.run {
         prompt = "<b>Spotify Shell</b>: ",
         bg_cursor = '#84bd00',
-        textbox = wibox.widget.textbox {
+        textbox = wibox.widget {
+            widget = wibox.widget.textbox,
             text = "test"
         },
         exe_callback = function(input_text)
