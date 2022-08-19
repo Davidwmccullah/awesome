@@ -34,6 +34,7 @@ local signals = require("main.signals")
 
 -- Keys
 local globalkeys = require("binding.globalkeys")
+local globalbuttons = require("binding.globalbuttons")
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
@@ -168,10 +169,8 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
--- {{{ Mouse bindings
-root.buttons()
--- }}}
+-- Global mouse bindings
+root.buttons(globalbuttons)
 
--- Keys
+-- Global keyboard bindings
 root.keys(globalkeys)
--- }}}
