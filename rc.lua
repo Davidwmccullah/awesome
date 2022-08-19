@@ -12,6 +12,7 @@ local wibox = require("wibox")
 
 -- Theme handling library
 local beautiful = require("beautiful")
+require("deco.shapes")
 
 -- Notification library
 -- local naughty = require("naughty")
