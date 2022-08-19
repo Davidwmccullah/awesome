@@ -22,7 +22,14 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Error handling
 require("main.error-handling")
 
+-- User variables
 local user_variables = require("main.user-variables")
+
+-- Themes define colours, icons, font and wallpapers.
+beautiful.init("~/.config/awesome/theme.lua")
+
+-- Table of layouts to cover with awful.layout.inc, order matters.
+awful.layout.layouts = { awful.layout.suit.tile }
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
