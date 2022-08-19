@@ -2,8 +2,9 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local shapes = require("deco.shapes")
-local dpi = xresources.apply_dpi
 local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
+
 
 awful.screen.connect_for_each_screen(function(s)
     s.wiboxpadding = awful.wibox {
