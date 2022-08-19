@@ -22,8 +22,8 @@ local signals = require("main.signals")
 require("deco.wallpaper")
 require("deco.taglist")
 require("deco.tasklist")
-require("deco.statusbar")
 require("deco.widgets")
+require("deco.statusbar")
 
 -- Global mouse bindings
 root.buttons(require("binding.globalbuttons"))
