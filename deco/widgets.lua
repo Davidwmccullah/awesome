@@ -13,8 +13,14 @@ awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
     s.tray = wibox.widget.systray()
     s.prompt = wibox.widget {
-        widget = wibox.widget.textbox,
-        text = "test",
-        visible = true
+        widget = wibox.container.background,
+        bg = "ff0000",
+        forced_height = 300,
+        {
+            widget = wibox.widget.textbox,
+            text = "test",
+            visible = true
+        }
+
     }
 end)
