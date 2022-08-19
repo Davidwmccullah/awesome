@@ -1,7 +1,9 @@
 local awful = require("awful")
 local gears = require("gears")
+local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 local user_variables = require("main.user-variables")
+local menu = require("main.menu")
 
 local globalkeys = gears.table.join(
     awful.key({ user_variables.modkey,           }, "s",      hotkeys_popup.show_help,
@@ -25,7 +27,7 @@ local globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ user_variables.modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ user_variables.modkey,           }, "w", function () menu.menu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
