@@ -1,5 +1,6 @@
 local awful = require("awful")
 local gears = require("gears")
+local hotkeys_popup = require("awful.hotkeys_popup")
 local user_variables = require("main.user-variables")
 
 local globalkeys = gears.table.join(
