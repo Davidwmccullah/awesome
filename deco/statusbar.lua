@@ -9,7 +9,7 @@ awful.screen.connect_for_each_screen(function(s)
         width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap),
         ontop = true,
         screen = s,
-        shape = shapes.rrect
+        shape = shapes.rrect,
         widget = {
             layout = wibox.layout.align.horizontal,
             expand = "none",
