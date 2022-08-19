@@ -34,21 +34,12 @@ local globalbuttons = require("binding.globalbuttons")
 
 -- Wallpaper
 local wallpaper = require("deco.wallpaper")
-
--- {{{ Wibar
--- Create a wibox for each screen and add it
-
-
-
-
-
+local taglist = require("deco.taglist")
+local tasklist = require("deco.tasklist")
 
 awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
-
     s.tray = wibox.widget.systray()
-
-
 
     -- Create the wibox
     s.navbar = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = shapes.rrect })
