@@ -25,7 +25,3 @@ do
     end)
 end
 -- }}}
-
-naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Notification test",
-                     text = "Testing" })
