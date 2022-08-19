@@ -1,5 +1,5 @@
 -- Standard awesome library
-local gears = require("gears")
+-- local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 
@@ -13,7 +13,7 @@ local shapes = require("deco.shapes")
 -- Notification library
 -- local naughty = require("naughty")
 -- local menubar = require("menubar")
-local hotkeys_popup = require("awful.hotkeys_popup")
+-- local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Error handling
 require("main.error-handling")
@@ -40,33 +40,9 @@ local tasklist = require("deco.tasklist")
 awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
     s.tray = wibox.widget.systray()
-
-    -- Create the wibox
-    s.navbar = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = shapes.rrect })
-
     s.mypromptbox = awful.widget.prompt()
 
-    -- Add widgets to the wibox
-    s.navbar:setup {
-        layout = wibox.layout.align.horizontal,
-        expand = "none",
 
-        -- Left widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            s.taglist,
-        },
-
-        -- Middle widget
-        s.mypromptbox,
-        s.clock,
-
-        -- Right widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            s.tray,
-        },
-    }
 end)
 -- }}}
 
