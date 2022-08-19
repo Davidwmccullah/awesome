@@ -19,7 +19,8 @@ local shapes = require("deco.shapes")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
-
+-- Error handling
+require("main.error-handling")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.

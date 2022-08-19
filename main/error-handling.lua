@@ -1,3 +1,4 @@
+-- Notification library
 local naughty = require("naughty")
 
 -- {{{ Error handling
@@ -24,3 +25,7 @@ do
     end)
 end
 -- }}}
+
+naughty.notify({ preset = naughty.config.presets.critical,
+                     title = "Notification test",
+                     text = "Testing" })
