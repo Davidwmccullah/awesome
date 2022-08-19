@@ -23,29 +23,32 @@ awful.screen.connect_for_each_screen(function(s)
             {
                 widget = wibox.container.background,
                 bg = beautiful.bg_normal,
-                forced_height = 4 * beautiful.useless_gap,
                 shape = shapes.rrect,
-                {            
-                    layout = wibox.layout.align.horizontal,
-                    expand = "none",
-                    forced_height = 2 * beautiful.useless_gap,
-            
-                    -- Left widgets
-                    {
-                        layout = wibox.layout.fixed.horizontal,
-                        s.taglist,
-                    },
-            
-                    -- Middle widget
-                    -- s.prompt,
-                    s.clock,
-            
-                    -- Right widgets
-                    {
-                        layout = wibox.layout.fixed.horizontal,
-                        s.tray,
+                {
+                    widget = wibox.container.constraint,
+                    height = 2 * beautiful.useless_gap,
+                    {            
+                        layout = wibox.layout.align.horizontal,
+                        expand = "none",
+                
+                        -- Left widgets
+                        {
+                            layout = wibox.layout.fixed.horizontal,
+                            s.taglist,
+                        },
+                
+                        -- Middle widget
+                        -- s.prompt,
+                        s.clock,
+                
+                        -- Right widgets
+                        {
+                            layout = wibox.layout.fixed.horizontal,
+                            s.tray,
+                        }
                     }
                 }
+                
             }
         }
     }
