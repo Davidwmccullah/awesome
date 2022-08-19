@@ -15,11 +15,14 @@ awful.screen.connect_for_each_screen(function(s)
             text = "test"
         },
         exe_callback = function(input_text)
-            if not input_text or #input_text == 0 then return end
-            awful.spawn("sp " .. input_text)
+            naughty.notify {
+                text = input_text
+            }
+            -- if not input_text or #input_text == 0 then return end
+            -- awful.spawn("sp " .. input_text)
         end,
-        done_callback = function(p)
-            p.visible = false
+        done_callback = function()
+            -- p.visible = false
         end
     }
 end)
