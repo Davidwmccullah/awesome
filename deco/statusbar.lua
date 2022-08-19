@@ -10,29 +10,26 @@ awful.screen.connect_for_each_screen(function(s)
         width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap),
         ontop = true,
         screen = s,
+        y = beautiful.useless_gap * 2,
         shape = shapes.rrect,
         widget = wibox.widget {
-            widget = wibox.container.margin,
-            top = beautiful.useless_gap * 2,
+            layout = wibox.layout.align.horizontal,
+            expand = "none",
+    
+            -- Left widgets
             {
-                layout = wibox.layout.align.horizontal,
-                expand = "none",
-        
-                -- Left widgets
-                {
-                    layout = wibox.layout.fixed.horizontal,
-                    s.taglist,
-                },
-        
-                -- Middle widget
-                -- s.prompt,
-                s.clock,
-        
-                -- Right widgets
-                {
-                    layout = wibox.layout.fixed.horizontal,
-                    s.tray,
-                }
+                layout = wibox.layout.fixed.horizontal,
+                s.taglist,
+            },
+    
+            -- Middle widget
+            -- s.prompt,
+            s.clock,
+    
+            -- Right widgets
+            {
+                layout = wibox.layout.fixed.horizontal,
+                s.tray,
             }
         }
     }
