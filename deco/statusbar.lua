@@ -5,12 +5,13 @@ local shapes = require("deco.shapes")
 
 awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
+
     s.statusbar = awful.wibox {
         width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap),
         ontop = true,
         screen = s,
         shape = shapes.rrect,
-        widget = {
+        widget = wibox.widget {
             layout = wibox.layout.align.horizontal,
             expand = "none",
     
