@@ -13,8 +13,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
     s.tray = wibox.widget.systray()
     s.prompt = wibox.widget {
-        widget = wibox.container.margin,
-        margins = 4 * beautiful.useless_gap,
+
+        layout = wibox.layout.fixed.horizontal,
         {
             widget = wibox.container.background,
             bg = "ff0000",
