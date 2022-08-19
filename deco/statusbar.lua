@@ -27,6 +27,8 @@ awful.screen.connect_for_each_screen(function(s)
                 widget = wibox.container.background,
                 bg = beautiful.bg_normal,
                 shape = shapes.rrect,
+                shape_border_width = beautiful.border_width,
+                shape_border_color = beautiful.border_color,
                 {     
                     layout = wibox.layout.align.horizontal,
                     expand = "none",
