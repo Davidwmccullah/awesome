@@ -1,7 +1,7 @@
 local awful = require("awful")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-local user_variables = require("main.user_variables")
+local user_variables = require("main.user-variables")
 
 local menu = awful.menu({ items = { { "open terminal", user_variables.terminal },
                                     { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
