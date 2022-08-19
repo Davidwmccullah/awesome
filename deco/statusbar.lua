@@ -10,27 +10,25 @@ awful.screen.connect_for_each_screen(function(s)
         ontop = true,
         screen = s,
         shape = shapes.rrect
-    }
-
-    -- Add widgets to the wibox
-    s.statusbar:setup {
-        layout = wibox.layout.align.horizontal,
-        expand = "none",
-
-        -- Left widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            s.taglist,
-        },
-
-        -- Middle widget
-        -- s.prompt,
-        s.clock,
-
-        -- Right widgets
-        {
-            layout = wibox.layout.fixed.horizontal,
-            s.tray,
+        widget = {
+            layout = wibox.layout.align.horizontal,
+            expand = "none",
+    
+            -- Left widgets
+            {
+                layout = wibox.layout.fixed.horizontal,
+                s.taglist,
+            },
+    
+            -- Middle widget
+            -- s.prompt,
+            s.clock,
+    
+            -- Right widgets
+            {
+                layout = wibox.layout.fixed.horizontal,
+                s.tray,
+            }
         }
     }
 end)
