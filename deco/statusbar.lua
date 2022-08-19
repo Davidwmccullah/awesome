@@ -17,36 +17,34 @@ awful.screen.connect_for_each_screen(function(s)
         shape = shapes.rrect,
         bg = "#00000000",
         widget = wibox.widget {
+            -- Margins
             widget = wibox.container.margin,
             top = 2 * beautiful.useless_gap,
             left = 2 * beautiful.useless_gap,
             right = 2 * beautiful.useless_gap,
             {
+                -- Color / Shape
                 widget = wibox.container.background,
                 bg = beautiful.bg_normal,
                 shape = shapes.rrect,
-                {
-                    widget = wibox.container.constraint,
-                    height = 2 * beautiful.useless_gap,
-                    {            
-                        layout = wibox.layout.align.horizontal,
-                        expand = "none",
-                
-                        -- Left widgets
-                        {
-                            layout = wibox.layout.fixed.horizontal,
-                            s.taglist,
-                        },
-                
-                        -- Middle widget
-                        -- s.prompt,
-                        s.clock,
-                
-                        -- Right widgets
-                        {
-                            layout = wibox.layout.fixed.horizontal,
-                            s.tray,
-                        }
+                {     
+                    layout = wibox.layout.align.horizontal,
+                    expand = "none",
+            
+                    -- Left widgets
+                    {
+                        layout = wibox.layout.fixed.horizontal,
+                        s.taglist,
+                    },
+            
+                    -- Middle widget
+                    -- s.prompt,
+                    s.clock,
+            
+                    -- Right widgets
+                    {
+                        layout = wibox.layout.fixed.horizontal,
+                        s.tray,
                     }
                 }
                 
