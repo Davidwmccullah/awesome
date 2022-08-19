@@ -14,7 +14,6 @@ awful.screen.connect_for_each_screen(function(s)
         height = 4 * beautiful.useless_gap,
         ontop = true,
         screen = s,
-        shape = shapes.rrect,
         bg = "#00000000",
         widget = wibox.widget {
             -- Margins
