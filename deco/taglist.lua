@@ -1,6 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 local user_variables = require("main.user-variables")
+local shapes = require("deco.shapes")
 
 local taglist_buttons = gears.table.join(
     awful.button({ }, 1, function(t) t:view_only() end),
@@ -24,6 +25,9 @@ awful.screen.connect_for_each_screen(function(s)
     s.taglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+        buttons = taglist_buttons,
+        style = {
+            shape = shapes.rrect
+        }
     }
 end)
