@@ -13,10 +13,10 @@ awful.screen.connect_for_each_screen(function(s)
         shape = shapes.rrect,
         widget = wibox.widget {
             widget = wibox.container.margin,
-            margin = {
+            margins = {
                 top = 4 * beautiful.useless_gap
             },
-            
+
             {
                 layout = wibox.layout.align.horizontal,
                 expand = "none",
