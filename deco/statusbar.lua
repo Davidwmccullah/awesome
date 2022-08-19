@@ -15,17 +15,17 @@ awful.screen.connect_for_each_screen(function(s)
         -- Left widgets
         {
             layout = wibox.layout.fixed.horizontal,
-            s.tasklist,
+            s.taglist,
         },
 
         -- Middle widget
-        s.prompt,
+        -- s.prompt,
         s.clock,
 
         -- Right widgets
         {
             layout = wibox.layout.fixed.horizontal,
-            s.tray,
+            s.tasklist,
         }
     }
 end)
