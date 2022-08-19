@@ -2,7 +2,6 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local shapes = require("deco.shapes")
-local 
 
 awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
@@ -27,6 +26,6 @@ awful.screen.connect_for_each_screen(function(s)
         {
             layout = wibox.layout.fixed.horizontal,
             s.tasklist,
-        },
+        }
     }
 end)
