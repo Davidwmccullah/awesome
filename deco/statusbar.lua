@@ -15,7 +15,7 @@ awful.screen.connect_for_each_screen(function(s)
         -- Left widgets
         {
             layout = wibox.layout.fixed.horizontal,
-            s.taglist,
+            s.tasklist,
         },
 
         -- Middle widget
@@ -25,7 +25,7 @@ awful.screen.connect_for_each_screen(function(s)
         -- Right widgets
         {
             layout = wibox.layout.fixed.horizontal,
-            s.tasklist,
+            s.tray,
         }
     }
 end)
