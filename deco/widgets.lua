@@ -7,7 +7,7 @@ local naughty = require("naughty")
 awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
     s.tray = wibox.widget.systray()
-    s.prompt = awful.widget.prompt.run {
+    s.prompt = awful.widget.prompt {
         prompt = "<b>Spotify Shell</b>: ",
         bg_cursor = '#84bd00',
         textbox = wibox.widget {
