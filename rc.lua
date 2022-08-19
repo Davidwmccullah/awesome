@@ -26,7 +26,7 @@ require("main.error-handling")
 local user_variables = require("main.user-variables")
 
 local layouts = require("main.layouts")
--- local tags = require("main.tags")
+local tags = require("main.tags")
 -- local menu = require("main.menu")
 -- local rules = require("main.rules")
 -- local signals = require("main.signals")
@@ -121,9 +121,6 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
-
-    -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5"}, s, awful.layout.layouts[1])
 
     -- Create a taglist widget
     s.workspaces = awful.widget.taglist {
