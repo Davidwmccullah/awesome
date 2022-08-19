@@ -25,11 +25,16 @@ require("main.error-handling")
 -- User variables
 local user_variables = require("main.user-variables")
 
+local layouts = require("main.layouts")
+-- local tags = require("main.tags")
+-- local menu = require("main.menu")
+-- local rules = require("main.rules")
+-- local signals = require("main.signals")
+
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
 
--- Table of layouts to cover with awful.layout.inc, order matters.
-awful.layout.layouts = { awful.layout.suit.tile }
+
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
