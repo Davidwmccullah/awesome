@@ -11,7 +11,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     s.statusbar = awful.wibox {
         -- width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap),
-        height = 2 * beautiful.useless_gap,
+        height = 8 * beautiful.useless_gap,
         ontop = true,
         screen = s,
         shape = shapes.rrect,
