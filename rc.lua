@@ -32,10 +32,11 @@ local signals = require("main.signals")
 local globalkeys = require("binding.globalkeys")
 local globalbuttons = require("binding.globalbuttons")
 
--- Wallpaper
+-- Rice
 local wallpaper = require("deco.wallpaper")
 local taglist = require("deco.taglist")
 local tasklist = require("deco.tasklist")
+local statusbar = require("deco.statusbar")
 
 awful.screen.connect_for_each_screen(function(s)
     s.clock = wibox.widget.textclock()
