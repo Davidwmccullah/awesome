@@ -12,7 +12,7 @@ local wibox = require("wibox")
 
 -- Theme handling library
 local beautiful = require("beautiful")
-require("deco.shapes")
+local shapes = require("deco.shapes")
 
 -- Notification library
 -- local naughty = require("naughty")
@@ -151,7 +151,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.navbar = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = rrect })
+    s.navbar = awful.wibox({ width = awful.screen.focused().geometry.width - (4 * beautiful.useless_gap), ontop = true, screen = s, shape = shapes.rrect })
 
     s.mypromptbox = awful.widget.prompt()
 
@@ -473,7 +473,7 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 
-    c.shape = rrect
+    c.shape = shapes.rrect
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
