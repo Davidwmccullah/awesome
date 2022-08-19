@@ -15,7 +15,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.prompt = awful.widget.prompt {
         prompt = "<b>Spotify Shell</b>: ",
         bg_cursor = '#84bd00',
-        textbox = w,
+        textbox = awful.widget.prompt,
         exe_callback = function(input_text)
             w.visible = true
             -- if not input_text or #input_text == 0 then return end
