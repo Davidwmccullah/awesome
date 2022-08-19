@@ -19,7 +19,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
 
         -- Middle widget
-        s.mypromptbox,
+        s.prompt,
         s.clock,
 
         -- Right widgets
