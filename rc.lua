@@ -31,8 +31,7 @@ local tags = require("main.tags")
 local rules = require("main.rules")
 -- local signals = require("main.signals")
 
--- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/theme.lua")
+
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu

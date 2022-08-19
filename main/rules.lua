@@ -1,4 +1,5 @@
 local awful = require("awful")
+local beautiful = require("beautiful")
 local clientkeys = require("binding.clientkeys")
 local clientbuttons = require("binding.clientbuttons")
 
