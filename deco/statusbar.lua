@@ -28,6 +28,7 @@ awful.screen.connect_for_each_screen(function(s)
                 {            
                     layout = wibox.layout.align.horizontal,
                     expand = "none",
+                    forced_height = 2 * beautiful.useless_gap,
             
                     -- Left widgets
                     {
