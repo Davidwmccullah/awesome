@@ -23,6 +23,7 @@ awful.screen.connect_for_each_screen(function(s)
             {
                 widget = wibox.container.background,
                 bg = beautiful.bg_normal,
+                forced_height = 2 * beautiful.useless_gap,
                 shape = shapes.rrect,
                 {            
                     layout = wibox.layout.align.horizontal,
