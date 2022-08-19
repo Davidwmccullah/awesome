@@ -1,4 +1,5 @@
 local awful = require("awful")
+local gears = require("gears")
 local wibox = require("wibox")
 
 awful.screen.connect_for_each_screen(function(s)
