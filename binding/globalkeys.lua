@@ -88,7 +88,7 @@ local globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ user_variables.modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ user_variables.modkey },            "r",     function () awful.screen.focused().prompt:run() end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ user_variables.modkey }, "x",

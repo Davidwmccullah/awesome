@@ -18,25 +18,15 @@ local menu = require("main.menu")
 local rules = require("main.rules")
 local signals = require("main.signals")
 
--- Global bindings
-local globalkeys = require("binding.globalkeys")
-local globalbuttons = require("binding.globalbuttons")
-
 -- Rice
 require("deco.wallpaper")
 require("deco.taglist")
 require("deco.tasklist")
 require("deco.statusbar")
-
-awful.screen.connect_for_each_screen(function(s)
-    s.clock = wibox.widget.textclock()
-    s.tray = wibox.widget.systray()
-    s.mypromptbox = awful.widget.prompt()
-end)
--- }}}
+require("deco.widgets")
 
 -- Global mouse bindings
-root.buttons(globalbuttons)
+root.buttons(require("binding.globalbuttons"))
 
 -- Global keyboard bindings
-root.keys(globalkeys)
+root.keys(require("binding.globalkeys"))
